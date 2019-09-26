@@ -42,13 +42,7 @@
             this.txtStatus = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.table = new System.Windows.Forms.DataGridView();
-            this.btnSend = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.txtPrice = new System.Windows.Forms.TextBox();
-            this.txtCost = new System.Windows.Forms.TextBox();
-            this.mtxtCreationDate = new System.Windows.Forms.MaskedTextBox();
-            this.mtxtDueDate = new System.Windows.Forms.MaskedTextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Names = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Details = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,7 +52,13 @@
             this.DueDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.table)).BeginInit();
+            this.btnSend = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.txtCost = new System.Windows.Forms.TextBox();
+            this.mtxtCreationDate = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtDueDate = new System.Windows.Forms.MaskedTextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -187,12 +187,12 @@
             this.label11.TabIndex = 0;
             this.label11.Text = "Estado";
             // 
-            // table
+            // dataGridView1
             // 
-            this.table.AllowUserToAddRows = false;
-            this.table.AllowUserToDeleteRows = false;
-            this.table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.Names,
             this.Details,
@@ -202,64 +202,14 @@
             this.DueDate,
             this.Category,
             this.Estatus});
-            this.table.Location = new System.Drawing.Point(15, 107);
-            this.table.Name = "table";
-            this.table.ReadOnly = true;
-            this.table.Size = new System.Drawing.Size(944, 258);
-            this.table.TabIndex = 3;
-            this.table.TabStop = false;
-            // 
-            // btnSend
-            // 
-            this.btnSend.Location = new System.Drawing.Point(804, 15);
-            this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(126, 40);
-            this.btnSend.TabIndex = 9;
-            this.btnSend.Text = "Agregar";
-            this.btnSend.UseVisualStyleBackColor = true;
-            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(804, 61);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(126, 40);
-            this.btnDelete.TabIndex = 10;
-            this.btnDelete.Text = "Eliminar";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // txtPrice
-            // 
-            this.txtPrice.Location = new System.Drawing.Point(335, 72);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(147, 20);
-            this.txtPrice.TabIndex = 4;
-            // 
-            // txtCost
-            // 
-            this.txtCost.Location = new System.Drawing.Point(335, 28);
-            this.txtCost.Name = "txtCost";
-            this.txtCost.Size = new System.Drawing.Size(147, 20);
-            this.txtCost.TabIndex = 3;
-            // 
-            // mtxtCreationDate
-            // 
-            this.mtxtCreationDate.Location = new System.Drawing.Point(488, 28);
-            this.mtxtCreationDate.Mask = "00/00/0000";
-            this.mtxtCreationDate.Name = "mtxtCreationDate";
-            this.mtxtCreationDate.Size = new System.Drawing.Size(147, 20);
-            this.mtxtCreationDate.TabIndex = 5;
-            this.mtxtCreationDate.ValidatingType = typeof(System.DateTime);
-            // 
-            // mtxtDueDate
-            // 
-            this.mtxtDueDate.Location = new System.Drawing.Point(488, 72);
-            this.mtxtDueDate.Mask = "00/00/0000";
-            this.mtxtDueDate.Name = "mtxtDueDate";
-            this.mtxtDueDate.Size = new System.Drawing.Size(147, 20);
-            this.mtxtDueDate.TabIndex = 6;
-            this.mtxtDueDate.ValidatingType = typeof(System.DateTime);
+            this.dataGridView1.Location = new System.Drawing.Point(15, 107);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(944, 258);
+            this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.TabStop = false;
             // 
             // id
             // 
@@ -315,6 +265,58 @@
             this.Estatus.Name = "Estatus";
             this.Estatus.ReadOnly = true;
             // 
+            // btnSend
+            // 
+            this.btnSend.Location = new System.Drawing.Point(804, 15);
+            this.btnSend.Name = "btnSend";
+            this.btnSend.Size = new System.Drawing.Size(126, 40);
+            this.btnSend.TabIndex = 9;
+            this.btnSend.Text = "Agregar";
+            this.btnSend.UseVisualStyleBackColor = true;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(804, 61);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(126, 40);
+            this.btnDelete.TabIndex = 10;
+            this.btnDelete.Text = "Eliminar";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.Location = new System.Drawing.Point(335, 72);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(147, 20);
+            this.txtPrice.TabIndex = 4;
+            // 
+            // txtCost
+            // 
+            this.txtCost.Location = new System.Drawing.Point(335, 28);
+            this.txtCost.Name = "txtCost";
+            this.txtCost.Size = new System.Drawing.Size(147, 20);
+            this.txtCost.TabIndex = 3;
+            // 
+            // mtxtCreationDate
+            // 
+            this.mtxtCreationDate.Location = new System.Drawing.Point(488, 28);
+            this.mtxtCreationDate.Mask = "00/00/0000";
+            this.mtxtCreationDate.Name = "mtxtCreationDate";
+            this.mtxtCreationDate.Size = new System.Drawing.Size(147, 20);
+            this.mtxtCreationDate.TabIndex = 5;
+            this.mtxtCreationDate.ValidatingType = typeof(System.DateTime);
+            // 
+            // mtxtDueDate
+            // 
+            this.mtxtDueDate.Location = new System.Drawing.Point(488, 72);
+            this.mtxtDueDate.Mask = "00/00/0000";
+            this.mtxtDueDate.Name = "mtxtDueDate";
+            this.mtxtDueDate.Size = new System.Drawing.Size(147, 20);
+            this.mtxtDueDate.TabIndex = 6;
+            this.mtxtDueDate.ValidatingType = typeof(System.DateTime);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -324,7 +326,7 @@
             this.Controls.Add(this.mtxtCreationDate);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnSend);
-            this.Controls.Add(this.table);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtStatus);
@@ -342,8 +344,8 @@
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
-            this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.table)).EndInit();
+            this.Text = "Mantenimiento de Productos";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -365,7 +367,7 @@
         private System.Windows.Forms.TextBox txtStatus;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.DataGridView table;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnSend;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.TextBox txtPrice;

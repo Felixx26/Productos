@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace BusinessLogic
 {
-    class Process
+    public class Process
     {
         private Product product;
 
