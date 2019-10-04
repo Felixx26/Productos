@@ -43,21 +43,21 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnSend = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.txtMarca = new System.Windows.Forms.TextBox();
+            this.txtExist = new System.Windows.Forms.TextBox();
+            this.mtxtCreationDate = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtDueDate = new System.Windows.Forms.MaskedTextBox();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Names = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Details = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Existencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CreateDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DueDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSend = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.txtPrice = new System.Windows.Forms.TextBox();
-            this.txtCost = new System.Windows.Forms.TextBox();
-            this.mtxtCreationDate = new System.Windows.Forms.MaskedTextBox();
-            this.mtxtDueDate = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,9 +119,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(332, 10);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 16);
+            this.label4.Size = new System.Drawing.Size(69, 16);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Costo";
+            this.label4.Text = "Existencia";
             // 
             // label5
             // 
@@ -129,9 +129,9 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(332, 51);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 16);
+            this.label5.Size = new System.Drawing.Size(46, 16);
             this.label5.TabIndex = 0;
-            this.label5.Text = "Precio";
+            this.label5.Text = "Marca";
             // 
             // label6
             // 
@@ -196,8 +196,8 @@
             this.id,
             this.Names,
             this.Details,
-            this.Cost,
-            this.Price,
+            this.Existencia,
+            this.Marca,
             this.CreateDate,
             this.DueDate,
             this.Category,
@@ -210,6 +210,58 @@
             this.dataGridView1.Size = new System.Drawing.Size(944, 258);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.TabStop = false;
+            // 
+            // btnSend
+            // 
+            this.btnSend.Location = new System.Drawing.Point(804, 15);
+            this.btnSend.Name = "btnSend";
+            this.btnSend.Size = new System.Drawing.Size(126, 40);
+            this.btnSend.TabIndex = 9;
+            this.btnSend.Text = "Agregar";
+            this.btnSend.UseVisualStyleBackColor = true;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(804, 61);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(126, 40);
+            this.btnDelete.TabIndex = 10;
+            this.btnDelete.Text = "Eliminar";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // txtMarca
+            // 
+            this.txtMarca.Location = new System.Drawing.Point(335, 72);
+            this.txtMarca.Name = "txtMarca";
+            this.txtMarca.Size = new System.Drawing.Size(147, 20);
+            this.txtMarca.TabIndex = 4;
+            // 
+            // txtExist
+            // 
+            this.txtExist.Location = new System.Drawing.Point(335, 28);
+            this.txtExist.Name = "txtExist";
+            this.txtExist.Size = new System.Drawing.Size(147, 20);
+            this.txtExist.TabIndex = 3;
+            // 
+            // mtxtCreationDate
+            // 
+            this.mtxtCreationDate.Location = new System.Drawing.Point(488, 28);
+            this.mtxtCreationDate.Mask = "00/00/0000";
+            this.mtxtCreationDate.Name = "mtxtCreationDate";
+            this.mtxtCreationDate.Size = new System.Drawing.Size(147, 20);
+            this.mtxtCreationDate.TabIndex = 5;
+            this.mtxtCreationDate.ValidatingType = typeof(System.DateTime);
+            // 
+            // mtxtDueDate
+            // 
+            this.mtxtDueDate.Location = new System.Drawing.Point(488, 72);
+            this.mtxtDueDate.Mask = "00/00/0000";
+            this.mtxtDueDate.Name = "mtxtDueDate";
+            this.mtxtDueDate.Size = new System.Drawing.Size(147, 20);
+            this.mtxtDueDate.TabIndex = 6;
+            this.mtxtDueDate.ValidatingType = typeof(System.DateTime);
             // 
             // id
             // 
@@ -229,17 +281,17 @@
             this.Details.Name = "Details";
             this.Details.ReadOnly = true;
             // 
-            // Cost
+            // Existencia
             // 
-            this.Cost.HeaderText = "Costo";
-            this.Cost.Name = "Cost";
-            this.Cost.ReadOnly = true;
+            this.Existencia.HeaderText = "Existencia";
+            this.Existencia.Name = "Existencia";
+            this.Existencia.ReadOnly = true;
             // 
-            // Price
+            // Marca
             // 
-            this.Price.HeaderText = "Precio";
-            this.Price.Name = "Price";
-            this.Price.ReadOnly = true;
+            this.Marca.HeaderText = "Marca";
+            this.Marca.Name = "Marca";
+            this.Marca.ReadOnly = true;
             // 
             // CreateDate
             // 
@@ -265,58 +317,6 @@
             this.Estatus.Name = "Estatus";
             this.Estatus.ReadOnly = true;
             // 
-            // btnSend
-            // 
-            this.btnSend.Location = new System.Drawing.Point(804, 15);
-            this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(126, 40);
-            this.btnSend.TabIndex = 9;
-            this.btnSend.Text = "Agregar";
-            this.btnSend.UseVisualStyleBackColor = true;
-            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(804, 61);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(126, 40);
-            this.btnDelete.TabIndex = 10;
-            this.btnDelete.Text = "Eliminar";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // txtPrice
-            // 
-            this.txtPrice.Location = new System.Drawing.Point(335, 72);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(147, 20);
-            this.txtPrice.TabIndex = 4;
-            // 
-            // txtCost
-            // 
-            this.txtCost.Location = new System.Drawing.Point(335, 28);
-            this.txtCost.Name = "txtCost";
-            this.txtCost.Size = new System.Drawing.Size(147, 20);
-            this.txtCost.TabIndex = 3;
-            // 
-            // mtxtCreationDate
-            // 
-            this.mtxtCreationDate.Location = new System.Drawing.Point(488, 28);
-            this.mtxtCreationDate.Mask = "00/00/0000";
-            this.mtxtCreationDate.Name = "mtxtCreationDate";
-            this.mtxtCreationDate.Size = new System.Drawing.Size(147, 20);
-            this.mtxtCreationDate.TabIndex = 5;
-            this.mtxtCreationDate.ValidatingType = typeof(System.DateTime);
-            // 
-            // mtxtDueDate
-            // 
-            this.mtxtDueDate.Location = new System.Drawing.Point(488, 72);
-            this.mtxtDueDate.Mask = "00/00/0000";
-            this.mtxtDueDate.Name = "mtxtDueDate";
-            this.mtxtDueDate.Size = new System.Drawing.Size(147, 20);
-            this.mtxtDueDate.TabIndex = 6;
-            this.mtxtDueDate.ValidatingType = typeof(System.DateTime);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -333,9 +333,9 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtCategory);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtPrice);
+            this.Controls.Add(this.txtMarca);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtCost);
+            this.Controls.Add(this.txtExist);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtDetails);
             this.Controls.Add(this.label3);
@@ -370,15 +370,15 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnSend;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.TextBox txtPrice;
-        private System.Windows.Forms.TextBox txtCost;
+        private System.Windows.Forms.TextBox txtMarca;
+        private System.Windows.Forms.TextBox txtExist;
         private System.Windows.Forms.MaskedTextBox mtxtCreationDate;
         private System.Windows.Forms.MaskedTextBox mtxtDueDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Names;
         private System.Windows.Forms.DataGridViewTextBoxColumn Details;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cost;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Existencia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Marca;
         private System.Windows.Forms.DataGridViewTextBoxColumn CreateDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn DueDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Category;

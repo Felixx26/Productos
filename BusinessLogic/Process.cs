@@ -18,8 +18,8 @@ namespace BusinessLogic
             rows.Cells[0].Value = product.ID;
             rows.Cells[1].Value = product.Name;
             rows.Cells[2].Value = product.Details;
-            rows.Cells[3].Value = product.Cost;
-            rows.Cells[4].Value = product.Price;
+            rows.Cells[3].Value = product.Exist;
+            rows.Cells[4].Value = product.Marca;
             rows.Cells[5].Value = product.CreationDate;
             rows.Cells[6].Value = product.DueDate;
             rows.Cells[7].Value = product.Category;

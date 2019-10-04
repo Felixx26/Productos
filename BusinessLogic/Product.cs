@@ -13,13 +13,13 @@ namespace BusinessLogic
 
         }
 
-        public Product(string id, string name, string details, double cost, double price, string creationDate, string dueDate, string category, string status)
+        public Product(string id, string name, string details, int exist, String marca, string creationDate, string dueDate, string category, string status)
         {
             this.ID = id;
             this.Name = name;
             this.Details = details;
-            this.Cost = cost;
-            this.Price = price;
+            this.Exist = exist;
+            this.Marca = marca;
             this.CreationDate = creationDate;
             this.DueDate = dueDate;
             this.Category = category;
@@ -29,8 +29,8 @@ namespace BusinessLogic
         public string ID { get; set; }
         public string Name { get; set;}
         public string Details { get; set;}
-        public double Cost { get; set;}
-        public double Price { get; set;}
+        public int Exist { get; set;}
+        public String Marca { get; set;}
         public string CreationDate { get; set;}
         public string DueDate { get; set;}
         public string Category { get; set;}
